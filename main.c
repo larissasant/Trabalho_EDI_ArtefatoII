@@ -1,3 +1,11 @@
+/*
+Trabalho Final EDI
+Alunos: Larissa Santos e Bruno Reis
+Disciplina: Estrutura de Dados I
+IDE: Code Blocks 16.01
+Compilador: GNU GCC
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
@@ -36,22 +44,22 @@ int main(){
         printf ("Erro\n");
         exit(1);
     }
-    else // se foi aberto o programa inicializa suas funçoes
+    else // se foi aberto o programa inicializa suas funÃ§oes
     {
         char c; // caracter auxiliar usado para receber cada char do arquivo
         j = 0;
         printf("\n\n\t\tENTRADA:\n\n");
-        while((c = fgetc(arquivo)) != EOF) // condição para ler todo arquivo ate chegar ao fim
+        while((c = fgetc(arquivo)) != EOF) // condiÃ§Ã£o para ler todo arquivo ate chegar ao fim
         {
-            if (c != ' ' && c != '\n') //condição de controle para inserção das palavras em cada vetor abaixo
+            if (c != ' ' && c != '\n') //condiÃ§Ã£o de controle para inserÃ§Ã£o das palavras em cada vetor abaixo
             {
-                palavra[j++] = c; // variavel vetor que recebe a palavra se diferente de espaço ou enter
-                textoOriginal[a++] = c; // variavel vetor que recebe a palavra se diferente de espaço ou enter
+                palavra[j++] = c; // variavel vetor que recebe a palavra se diferente de espaÃ§o ou enter
+                textoOriginal[a++] = c; // variavel vetor que recebe a palavra se diferente de espaÃ§o ou enter
             }
             else
             {
                 textoOriginal[a++] = c; // o texto continua a ser armazenado
-                palavra[j] = '\0'; // e dado fim a palavra para inserção
+                palavra[j] = '\0'; // e dado fim a palavra para inserÃ§Ã£o
                 tratamento1 (palavra); // e feito o tratamento de minusculo para maiusculo
                 insere(&TodasPalavras, palavra, linha); // inserido a palavra na lista que contera todas as palavras sem filtro
                 if (c == '\n') // se igual a \n o contador de linha sera somado +1 ao seu valor para ter o  controle das linhas
@@ -60,8 +68,8 @@ int main(){
                     quantidadeLinhas++;
                 }
 
-                strcpy(palavra,"\0"); // por fim e alocado "\0" para começar novamente a inserção de valores
-                j = 0; // variavel contador que auxiliar o vetor palavra e zerado para colocar os caracteres na posição 0 por diante
+                strcpy(palavra,"\0"); // por fim e alocado "\0" para comeÃ§ar novamente a inserÃ§Ã£o de valores
+                j = 0; // variavel contador que auxiliar o vetor palavra e zerado para colocar os caracteres na posiÃ§Ã£o 0 por diante
             }
         }
         textoOriginal[a] = '\0'; // apos percorrer todo arquivo e finalizado o texto com '\o'
@@ -71,17 +79,17 @@ int main(){
     for (aux = TodasPalavras ; aux != NULL; aux= aux->prox) //aqui se percorre a lista com todas as palavras
     {
 
-        insereSomentePalavrasUnicas(&lPalavrasUnicas,aux->palavra); //a função faz o filtro e insere as palavras apenas uma vez mesmo que repita
+        insereSomentePalavrasUnicas(&lPalavrasUnicas,aux->palavra); //a funÃ§Ã£o faz o filtro e insere as palavras apenas uma vez mesmo que repita
     }
     for (aux2 = lPalavrasUnicas ; aux2 != NULL; aux2 = aux2->prox)
     {
-//    chamar a função e salvar os indices e as palavras
+//    chamar a funÃ§Ã£o e salvar os indices e as palavras
         insereIndices(&TodasPalavras, &indices, aux2->palavra, quantidadeLinhas);
     }
 
     for (aux3 = indices ; aux3 != NULL; aux3 = aux3->prox)
     {
-//    chamar a função e salvar os indices invertendo os mesmos para impressao certa
+//    chamar a funÃ§Ã£o e salvar os indices invertendo os mesmos para impressao certa
         insereOcorrencias(&indicesOrganizado, aux3->linhaPalavra, aux3->quantidade);
     }
     libera(TodasPalavras);
