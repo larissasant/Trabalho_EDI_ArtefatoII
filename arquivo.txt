@@ -1,0 +1,5 @@
+Como posso aumentar a duração da bateria?
+A duração de bateria dos aparelhos no geral, varia de acordo com a utilização. Navegar, jogar, usar a Internet, fazer ligações e escrever mensagens consomem energia.  Você pode instalar e usar vários aplicativos no dispositivo e cada um deles tem suas próprias características.
+Alguns fatores precisam ser levados em consideração, como por exemplo: tempo em que a tela está ligada (utilizando internet, vídeos ou jogos) e aplicativos que exigem alto processamento (anti-vírus, jogos e outros), estes podem ser grandes vilões de uma boa duração de bateria.
+Ainda há aplicativos que exigem alto uso de memória e ficam sendo executados o tempo todo. Um bom exemplo são aplicativos de Anti-virus. Eles em geral, rodam o tempo todo e usam muita memória.  Tente remover aplicativos com esse comportamento e certamente a performance vai melhorar.
+Manter Wi-fi GPS ligados mesmo quando não estão em uso, força o aparelho a continuar buscando redes e sinais a medida em que você faz as suas tarefas, o que aumenta o consumo de bateria.
